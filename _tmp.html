@@ -1,0 +1,1806 @@
+<!-- 学生网上预定 -->
+
+
+
+ 
+
+
+
+
+ 
+ 
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>北京师范大学体育馆管理与网上预约系统</title>
+<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" id="main-theme-script">
+<link href="../css/themes/default.css" rel="stylesheet" id="theme-specific-script">
+<link href="../bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<link type="text/css" href="../page.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery/jquery-1.7.js" ></script>
+<link href="../css/simplenso.css" rel="stylesheet">
+<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js "></script>
+<script src="../scripts/jquery.cookie/jquery.cookie.js"></script>
+<script src="../scripts/simplenso/simplenso.js"></script>
+<script src="../My97DatePicker/WdatePicker.js"></script>
+
+<script src="../gymjs/gymcommon.js"></script>
+<script src="../gymjs/gymbook.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	initResourceTable(parent.limitBookDate,parent.limitBookCount,parent.time_date,parent.day_sable);
+	
+	
+		markStatusColor('5871','活动','1','');
+	
+		markStatusColor('5873','活动','1','');
+	
+		markStatusColor('5875','活动','1','');
+	
+		markStatusColor('5877','活动','1','');
+	
+		markStatusColor('5879','活动','1','');
+	
+		markStatusColor('5881','学生','1','');
+	
+		markStatusColor('5883','学生','1','');
+	
+		markStatusColor('5885','学生','1','');
+	
+		markStatusColor('5887','学生','1','');
+	
+		markStatusColor('5893','学生','1','');
+	
+		markStatusColor('5895','学生','1','');
+	
+		markStatusColor('5897','学生','1','');
+	
+		markStatusColor('5921','活动','1','');
+	
+		markStatusColor('5923','活动','1','');
+	
+		markStatusColor('5925','活动','1','');
+	
+		markStatusColor('5927','活动','1','');
+	
+		markStatusColor('5929','活动','1','');
+	
+		markStatusColor('5931','学生','1','');
+	
+		markStatusColor('5933','学生','1','');
+	
+		markStatusColor('5935','学生','1','');
+	
+		markStatusColor('5941','学生','1','');
+	
+		markStatusColor('5943','学生','1','');
+	
+		markStatusColor('5945','学生','1','');
+	
+		markStatusColor('5971','活动','1','');
+	
+		markStatusColor('5973','活动','1','');
+	
+		markStatusColor('5975','活动','1','');
+	
+		markStatusColor('5977','活动','1','');
+	
+		markStatusColor('5979','活动','1','');
+	
+		markStatusColor('5981','活动','1','');
+	
+		markStatusColor('5983','活动','1','');
+	
+		markStatusColor('5985','活动','1','');
+	
+		markStatusColor('5987','活动','1','');
+	
+		markStatusColor('5989','活动','1','');
+	
+		markStatusColor('5991','活动','1','');
+	
+		markStatusColor('5993','活动','1','');
+	
+		markStatusColor('5995','活动','1','');
+	
+		markStatusColor('5997','活动','1','');
+	
+		markStatusColor('6021','活动','1','');
+	
+		markStatusColor('6023','活动','1','');
+	
+		markStatusColor('6025','活动','1','');
+	
+		markStatusColor('6027','活动','1','');
+	
+		markStatusColor('6029','活动','1','');
+	
+		markStatusColor('6031','活动','1','');
+	
+		markStatusColor('6033','活动','1','');
+	
+		markStatusColor('6035','活动','1','');
+	
+		markStatusColor('6037','活动','1','');
+	
+		markStatusColor('6039','活动','1','');
+	
+		markStatusColor('6041','活动','1','');
+	
+		markStatusColor('6043','活动','1','');
+	
+		markStatusColor('6045','活动','1','');
+	
+		markStatusColor('6047','活动','1','');
+	
+		markStatusColor('35400','活动','1','');
+	
+		markStatusColor('35402','活动','1','');
+	
+		markStatusColor('35404','活动','1','');
+	
+		markStatusColor('35406','活动','1','');
+	
+		markStatusColor('35408','活动','1','');
+	
+		markStatusColor('35410','活动','1','');
+	
+		markStatusColor('35412','活动','1','');
+	
+		markStatusColor('35414','活动','1','');
+	
+		markStatusColor('35450','活动','1','');
+	
+		markStatusColor('35452','活动','1','');
+	
+		markStatusColor('35454','活动','1','');
+	
+		markStatusColor('35456','活动','1','');
+	
+		markStatusColor('35458','活动','1','');
+	
+		markStatusColor('35460','活动','1','');
+	
+		markStatusColor('35462','活动','1','');
+	
+		markStatusColor('35464','活动','1','');
+	
+		markStatusColor('35500','活动','1','');
+	
+		markStatusColor('35502','活动','1','');
+	
+		markStatusColor('35504','活动','1','');
+	
+		markStatusColor('35506','活动','1','');
+	
+		markStatusColor('35508','活动','1','');
+	
+		markStatusColor('35510','活动','1','');
+	
+		markStatusColor('35512','活动','1','');
+	
+		markStatusColor('35514','活动','1','');
+	
+		markStatusColor('35550','活动','1','');
+	
+		markStatusColor('35552','活动','1','');
+	
+		markStatusColor('35554','活动','1','');
+	
+		markStatusColor('35556','活动','1','');
+	
+		markStatusColor('35558','活动','1','');
+	
+		markStatusColor('35560','活动','1','');
+	
+		markStatusColor('35562','活动','1','');
+	
+		markStatusColor('35564','活动','1','');
+	
+		markStatusColor('50393','活动','1','');
+	
+		markStatusColor('50395','活动','1','');
+	
+		markStatusColor('50397','活动','1','');
+	
+		markStatusColor('50399','活动','1','');
+	
+		markStatusColor('50401','活动','1','');
+	
+		markStatusColor('50403','活动','1','');
+	
+		markStatusColor('50405','活动','1','');
+	
+		markStatusColor('50407','活动','1','');
+	
+		markStatusColor('50409','活动','1','');
+	
+		markStatusColor('50411','活动','1','');
+	
+		markStatusColor('50413','活动','1','');
+	
+		markStatusColor('50415','活动','1','');
+	
+		markStatusColor('50417','活动','1','');
+	
+		markStatusColor('50419','活动','1','');
+	
+		markStatusColor('50443','活动','1','');
+	
+		markStatusColor('50445','活动','1','');
+	
+		markStatusColor('50447','活动','1','');
+	
+		markStatusColor('50449','活动','1','');
+	
+		markStatusColor('50451','活动','1','');
+	
+		markStatusColor('50453','活动','1','');
+	
+		markStatusColor('50455','活动','1','');
+	
+		markStatusColor('50457','活动','1','');
+	
+		markStatusColor('50459','活动','1','');
+	
+		markStatusColor('50461','活动','1','');
+	
+		markStatusColor('50463','活动','1','');
+	
+		markStatusColor('50465','活动','1','');
+	
+		markStatusColor('50467','活动','1','');
+	
+		markStatusColor('50469','活动','1','');
+	
+		markStatusColor('50493','活动','1','');
+	
+		markStatusColor('50495','活动','1','');
+	
+		markStatusColor('50497','活动','1','');
+	
+		markStatusColor('50499','活动','1','');
+	
+		markStatusColor('50501','活动','1','');
+	
+		markStatusColor('50503','活动','1','');
+	
+		markStatusColor('50505','活动','1','');
+	
+		markStatusColor('50507','活动','1','');
+	
+		markStatusColor('50509','活动','1','');
+	
+		markStatusColor('50511','活动','1','');
+	
+		markStatusColor('50513','活动','1','');
+	
+		markStatusColor('50515','活动','1','');
+	
+		markStatusColor('50517','活动','1','');
+	
+		markStatusColor('50519','活动','1','');
+	
+		markStatusColor('50543','活动','1','');
+	
+		markStatusColor('50545','活动','1','');
+	
+		markStatusColor('50547','活动','1','');
+	
+		markStatusColor('50549','活动','1','');
+	
+		markStatusColor('50551','活动','1','');
+	
+		markStatusColor('50553','活动','1','');
+	
+		markStatusColor('50555','活动','1','');
+	
+		markStatusColor('50557','活动','1','');
+	
+		markStatusColor('50559','活动','1','');
+	
+		markStatusColor('50561','活动','1','');
+	
+		markStatusColor('50563','活动','1','');
+	
+		markStatusColor('50565','活动','1','');
+	
+		markStatusColor('50567','活动','1','');
+	
+		markStatusColor('50569','活动','1','');
+	
+		markStatusColor('737970','学生','1','true');
+	
+});
+function markStatusColor(resId,userType,paymentStatus,present) {
+	//$("#resourceTd_"+resId).attr("userType",userType);
+	if(paymentStatus == '1'){
+		$("#resourceTd_"+resId).html("");
+		/* if(present == 'true') {
+			$("#resourceTd_"+resId).append("<font color='blue'>已到场</font>");
+		}else{
+			//$("#resourceTd_"+resId).append("<font color='green'>已交费</font>");
+		} */
+	}else{
+		$("#resourceTd_"+resId).html("<font color='red'>未交费</font>");
+	}
+}
+</script>
+</head>
+<!-- 显示预约情况的表格 -->
+<!-- 显示场馆资源的表格 -->
+
+<style type="text/css">
+
+#resourceTable {
+	border-collapse: collapse;
+	border-style:solid;
+  	border-width:3px;
+
+	vertical-align: middle;
+	font-size: 12px;
+	Table-layout: fixed;
+}
+
+#resourceTable th {
+	text-align: center;
+	padding: 0 0 0 0;
+	border-style:solid;
+	border-width:2px;
+	line-height: 20px;
+	word-wrap: break-word;
+	width: 5.5%;
+}
+
+#resourceTable td {
+	text-align: center;
+	padding: 0 0 0 0;
+	border-style:solid;
+	border-width:2px;
+	line-height: 20px;
+	word-wrap: break-word;
+}
+#resourceTable .datetime {
+	width: 10%;
+}
+</style>
+<input type="hidden" id="forMode" value="yuding"/>
+<input type="hidden" id="forbidName" value="消毒管理"/>
+<input type="hidden" id="forbidReason" value="消毒管理"/>
+<p id="forbidReasonShow"></p>
+<table id="resourceTable" style="font-size:10px">
+</table>
+<script>
+function Map() {
+    this.elements = new Array();
+
+    //获取MAP元素个数
+    this.size = function() {
+        return this.elements.length;
+    };
+
+    //判断MAP是否为空
+    this.isEmpty = function() {
+        return (this.elements.length < 1);
+    };
+
+    //删除MAP所有元素
+    this.clear = function() {
+        this.elements = new Array();
+    };
+
+    //向MAP中增加元素（key, value) 
+    this.put = function(_key, _value) {
+   		if(this.containsKey(_key)) {
+    		this.remove(_key);
+    	}
+        this.elements.push( {
+            key : _key,
+            value : _value
+        });
+    };
+
+    //删除指定KEY的元素，成功返回True，失败返回False
+    this.remove = function(_key) {
+        var bln = false;
+        try {
+            for (i = 0; i < this.elements.length; i++) {
+                if (this.elements[i].key == _key) {
+                    this.elements.splice(i, 1);
+                    return true;
+                }
+            }
+        } catch (e) {
+            bln = false;
+        }
+        return bln;
+    };
+
+    //获取指定KEY的元素值VALUE，失败返回NULL
+    this.get = function(_key) {
+        try {
+            for (i = 0; i < this.elements.length; i++) {
+                if (this.elements[i].key == _key) {
+                    return this.elements[i].value;
+                }
+            }
+        } catch (e) {
+            return null;
+        }
+    };
+
+    //获取指定索引的元素（使用element.key，element.value获取KEY和VALUE），失败返回NULL
+    this.element = function(_index) {
+        if (_index < 0 || _index >= this.elements.length) {
+            return null;
+        }
+        return this.elements[_index];
+    };
+
+    //判断MAP中是否含有指定KEY的元素
+    this.containsKey = function(_key) {
+        var bln = false;
+        try {
+            for (i = 0; i < this.elements.length; i++) {
+                if (this.elements[i].key == _key) {
+                    bln = true;
+                }
+            }
+        } catch (e) {
+            bln = false;
+        }
+        return bln;
+    };
+
+    //判断MAP中是否含有指定VALUE的元素
+    this.containsValue = function(_value) {
+        var bln = false;
+        try {
+            for (i = 0; i < this.elements.length; i++) {
+                if (this.elements[i].value == _value) {
+                    bln = true;
+                }
+            }
+        } catch (e) {
+            bln = false;
+        }
+        return bln;
+    };
+
+    //获取MAP中所有VALUE的数组（ARRAY）
+    this.values = function() {
+        var arr = new Array();
+        for (i = 0; i < this.elements.length; i++) {
+            arr.push(this.elements[i].value);
+        }
+        return arr;
+    };
+
+    //获取MAP中所有KEY的数组（ARRAY）
+    this.keys = function() {
+        var arr = new Array();
+        for (i = 0; i < this.elements.length; i++) {
+            arr.push(this.elements[i].key);
+        }
+        return arr;
+    };
+}
+
+
+function myserialize(objs){ 
+	var parmString = $(objs).serialize(); 
+	var parmArray = parmString.split("&"); 
+	var parmStringNew=""; 
+	$.each(parmArray,function(index,data){ 
+	var li_pos = data.indexOf("="); 
+	if(li_pos >0){ 
+		var name = data.substring(0,li_pos); 
+		var value = escape(decodeURIComponent(data.substr(li_pos+1))); 
+		var parm = name+"="+value; 
+		parmStringNew = parmStringNew=="" ? parm : parmStringNew + '&' + parm; 
+	} 
+	}); 
+	return parmStringNew; 
+}
+
+
+function ajaxSubmit(formId,callback,nowait) {
+	var params = myserialize($("#"+formId));
+	if(!nowait) {
+		$("#myWait").show();
+	}
+	$.ajax({
+	type:'POST',
+	url:$("#"+formId).attr("action"),
+	data:params,
+	success: function(dataMsg){
+		if(callback){
+			callback(dataMsg);
+		}
+		if(!nowait) {
+			$("#myWait").hide();
+		}
+	}
+  });
+}
+
+function isEmpty(value){   
+    return /^\s*$/.test(value);   
+}  
+
+
+function isDateIn(dateStr,limitCount){
+	var now = new Date();    //结束时间
+	dateStr = dateStr.replace(/-/g,"/");
+	var date = new Date(dateStr);
+	var timeDiffer = date.getTime() - now.getTime()  //时间差的毫秒数
+	//计算出相差天数
+	var dayDiffer=parseInt(timeDiffer / (1000 * 60 * 60 * 24));
+	if(dayDiffer < 0) {
+		return false;
+	}
+	return dayDiffer < limitCount;
+}
+
+Date.prototype.format = function(format) {
+    var o =
+    {
+        "M+" : this.getMonth()+1, //month
+        "d+" : this.getDate(),    //day
+        "h+" : this.getHours(),   //hour
+        "m+" : this.getMinutes(), //minute
+        "s+" : this.getSeconds(), //second
+        "q+" : Math.floor((this.getMonth()+3)/3),  //quarter
+        "S" : this.getMilliseconds() //millisecond
+    }
+    if(/(y+)/.test(format))
+    format=format.replace(RegExp.$1,(this.getFullYear()+"").substr(4 - RegExp.$1.length));
+    for(var k in o)
+    if(new RegExp("("+ k +")").test(format))
+    format = format.replace(RegExp.$1,RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length));
+    return format;
+}
+</script>
+<script>
+	//点击表格头部关联点击整列
+	var forUsual = false;
+	function clickth(thobj) {
+		forUsual = false;
+		 var thisIndex = $(thobj).index();
+		var tds = $(thobj).parent().parent().find("td");
+		var forModeVal = $("#forMode").val();
+		if(forModeVal=="xuanze") {
+			tds.each(function(){
+				if($(this).index()==thisIndex) {
+					$(this).trigger('click');
+				}
+			}); 
+		}else {
+			tds.each(function(){
+				if(!forUsual) {
+					if($(this).index()==thisIndex && typeof($(this).attr("bookId"))=="undefined") {
+						$(this).trigger('click');
+					}
+				}
+			});
+		}
+	}
+	//点击表格行首关联整行
+	function clicktr(thobj) {
+		forUsual = false;
+		var tds = $(thobj).parent().find("td");
+		var forModeVal = $("#forMode").val();
+		if(forModeVal=="xuanze") {
+			tds.each(function(){
+					$(this).trigger('click');
+			}); 
+		}else {
+			tds.each(function(){
+				if(!forUsual) {
+					if(typeof($(this).attr("bookId"))=="undefined") {
+						$(this).trigger('click');
+					}
+				}
+			});
+		}
+	}
+	//点击表格行首关联全部
+	function clickAll(thobj) {
+		forUsual = false;
+		var tds = $(thobj).parent().parent().find("td");
+		var forModeVal = $("#forMode").val();
+		if(forModeVal=="xuanze") {
+			tds.each(function(){
+					$(this).trigger('click');
+			}); 
+		}else {
+			tds.each(function(){
+				if(!forUsual) {
+					if(typeof($(this).attr("bookId"))=="undefined") {
+						$(this).trigger('click');
+					}
+				}
+			});
+		}
+		$(thobj).attr("style","cursor:pointer;background-color:#00FFFF");
+	}
+	var item_name = '';
+	function renderTable(){
+		var resourceArray = new Array();
+		
+		resourceArray.push({id:'5897',time_session:'8:00-9:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5947',time_session:'8:00-9:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5997',time_session:'8:00-9:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6047',time_session:'8:00-9:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35426',time_session:'8:00-9:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35476',time_session:'8:00-9:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35526',time_session:'8:00-9:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35576',time_session:'8:00-9:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50419',time_session:'8:00-9:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50469',time_session:'8:00-9:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50519',time_session:'8:00-9:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50569',time_session:'8:00-9:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737994',time_session:'8:00-9:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738045',time_session:'8:00-9:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5895',time_session:'9:00-10:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5945',time_session:'9:00-10:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5995',time_session:'9:00-10:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6045',time_session:'9:00-10:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35424',time_session:'9:00-10:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35474',time_session:'9:00-10:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35524',time_session:'9:00-10:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35574',time_session:'9:00-10:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50417',time_session:'9:00-10:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50467',time_session:'9:00-10:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50517',time_session:'9:00-10:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50567',time_session:'9:00-10:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737992',time_session:'9:00-10:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738043',time_session:'9:00-10:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5893',time_session:'10:00-11:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5943',time_session:'10:00-11:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5993',time_session:'10:00-11:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6043',time_session:'10:00-11:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35422',time_session:'10:00-11:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35472',time_session:'10:00-11:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35522',time_session:'10:00-11:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35572',time_session:'10:00-11:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50415',time_session:'10:00-11:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50465',time_session:'10:00-11:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50515',time_session:'10:00-11:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50565',time_session:'10:00-11:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737990',time_session:'10:00-11:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738041',time_session:'10:00-11:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5891',time_session:'11:00-12:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5941',time_session:'11:00-12:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5991',time_session:'11:00-12:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6041',time_session:'11:00-12:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35420',time_session:'11:00-12:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35470',time_session:'11:00-12:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35520',time_session:'11:00-12:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35570',time_session:'11:00-12:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50413',time_session:'11:00-12:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50463',time_session:'11:00-12:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50513',time_session:'11:00-12:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50563',time_session:'11:00-12:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737988',time_session:'11:00-12:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738039',time_session:'11:00-12:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5889',time_session:'12:00-13:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5939',time_session:'12:00-13:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5989',time_session:'12:00-13:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6039',time_session:'12:00-13:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35418',time_session:'12:00-13:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35468',time_session:'12:00-13:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35518',time_session:'12:00-13:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35568',time_session:'12:00-13:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50411',time_session:'12:00-13:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50461',time_session:'12:00-13:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50511',time_session:'12:00-13:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50561',time_session:'12:00-13:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737986',time_session:'12:00-13:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738037',time_session:'12:00-13:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5887',time_session:'13:00-14:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5937',time_session:'13:00-14:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5987',time_session:'13:00-14:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6037',time_session:'13:00-14:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35416',time_session:'13:00-14:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35466',time_session:'13:00-14:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35516',time_session:'13:00-14:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35566',time_session:'13:00-14:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50409',time_session:'13:00-14:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50459',time_session:'13:00-14:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50509',time_session:'13:00-14:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50559',time_session:'13:00-14:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737984',time_session:'13:00-14:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738035',time_session:'13:00-14:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5885',time_session:'14:00-15:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5935',time_session:'14:00-15:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5985',time_session:'14:00-15:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6035',time_session:'14:00-15:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35414',time_session:'14:00-15:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35464',time_session:'14:00-15:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35514',time_session:'14:00-15:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35564',time_session:'14:00-15:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50407',time_session:'14:00-15:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50457',time_session:'14:00-15:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50507',time_session:'14:00-15:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50557',time_session:'14:00-15:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737982',time_session:'14:00-15:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738033',time_session:'14:00-15:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5883',time_session:'15:00-16:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5933',time_session:'15:00-16:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5983',time_session:'15:00-16:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6033',time_session:'15:00-16:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35412',time_session:'15:00-16:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35462',time_session:'15:00-16:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35512',time_session:'15:00-16:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35562',time_session:'15:00-16:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50405',time_session:'15:00-16:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50455',time_session:'15:00-16:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50505',time_session:'15:00-16:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50555',time_session:'15:00-16:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737980',time_session:'15:00-16:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738031',time_session:'15:00-16:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5881',time_session:'16:00-17:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5931',time_session:'16:00-17:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5981',time_session:'16:00-17:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6031',time_session:'16:00-17:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35410',time_session:'16:00-17:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35460',time_session:'16:00-17:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35510',time_session:'16:00-17:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35560',time_session:'16:00-17:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50403',time_session:'16:00-17:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50453',time_session:'16:00-17:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50503',time_session:'16:00-17:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50553',time_session:'16:00-17:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737978',time_session:'16:00-17:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738029',time_session:'16:00-17:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5879',time_session:'17:00-18:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5929',time_session:'17:00-18:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5979',time_session:'17:00-18:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6029',time_session:'17:00-18:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35408',time_session:'17:00-18:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35458',time_session:'17:00-18:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35508',time_session:'17:00-18:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35558',time_session:'17:00-18:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50401',time_session:'17:00-18:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50451',time_session:'17:00-18:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50501',time_session:'17:00-18:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50551',time_session:'17:00-18:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737976',time_session:'17:00-18:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738027',time_session:'17:00-18:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5877',time_session:'18:00-19:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5927',time_session:'18:00-19:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5977',time_session:'18:00-19:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6027',time_session:'18:00-19:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35406',time_session:'18:00-19:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35456',time_session:'18:00-19:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35506',time_session:'18:00-19:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35556',time_session:'18:00-19:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50399',time_session:'18:00-19:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50449',time_session:'18:00-19:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50499',time_session:'18:00-19:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50549',time_session:'18:00-19:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737974',time_session:'18:00-19:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738025',time_session:'18:00-19:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5875',time_session:'19:00-20:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5925',time_session:'19:00-20:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5975',time_session:'19:00-20:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6025',time_session:'19:00-20:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35404',time_session:'19:00-20:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35454',time_session:'19:00-20:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35504',time_session:'19:00-20:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35554',time_session:'19:00-20:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50397',time_session:'19:00-20:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50447',time_session:'19:00-20:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50497',time_session:'19:00-20:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50547',time_session:'19:00-20:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737972',time_session:'19:00-20:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738023',time_session:'19:00-20:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5873',time_session:'20:00-21:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5923',time_session:'20:00-21:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5973',time_session:'20:00-21:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6023',time_session:'20:00-21:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35402',time_session:'20:00-21:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35452',time_session:'20:00-21:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35502',time_session:'20:00-21:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35552',time_session:'20:00-21:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50395',time_session:'20:00-21:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50445',time_session:'20:00-21:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50495',time_session:'20:00-21:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50545',time_session:'20:00-21:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737970',time_session:'20:00-21:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738021',time_session:'20:00-21:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'5871',time_session:'21:00-22:00',field_name:'羽1',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5921',time_session:'21:00-22:00',field_name:'羽2',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'5971',time_session:'21:00-22:00',field_name:'羽3',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'6021',time_session:'21:00-22:00',field_name:'羽4',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'35400',time_session:'21:00-22:00',field_name:'羽5',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35450',time_session:'21:00-22:00',field_name:'羽6',overlaySize:'2',can_see_student:'',can_net_book:'1'});
+		
+		resourceArray.push({id:'35500',time_session:'21:00-22:00',field_name:'羽7',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'35550',time_session:'21:00-22:00',field_name:'羽8',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'50393',time_session:'21:00-22:00',field_name:'小综合馆1试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50443',time_session:'21:00-22:00',field_name:'小综合馆2试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50493',time_session:'21:00-22:00',field_name:'小综合馆3试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'50543',time_session:'21:00-22:00',field_name:'小综合馆4试运行',overlaySize:'2',can_see_student:'0',can_net_book:'1'});
+		
+		resourceArray.push({id:'737968',time_session:'21:00-22:00',field_name:'二层东',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		resourceArray.push({id:'738019',time_session:'21:00-22:00',field_name:'二层西',overlaySize:'2',can_see_student:'1',can_net_book:'1'});
+		
+		
+		var head = new Map();
+		var trs = new Map();
+		
+		$.each(resourceArray,function(i,o){
+			head.put(o.field_name,o.can_see_student);
+			
+			var trArray = trs.get(o.time_session);
+			if(!trArray) {
+				trArray = new Array();
+				trs.put(o.time_session,trArray);
+			}
+			trArray.push(o);
+		}); 
+		
+		//make Th
+		if(trs.size()==0) {
+			$("#resourceTable").append("<h4>该场地在此时段不开放网上预约</h4>");
+		}else {
+			var thHtml = "<tr><th onclick='clickAll(this)' onmouseover=\"this.style.cssText='cursor:pointer;background-color:#00FFFF'\" onmouseout=\"this.style.cssText='cursor:pointer'\" onmousedown=\"this.style.cssText='cursor:progress;background-color:blue'\">"+item_name+"</th>";
+			$.each(head.keys(),function(i,o){
+				thHtml += "<th onclick='clickth(this)' onmouseup=\"this.style.cssText='cursor:pointer;background-color:#00FFFF'\" onmouseover=\"this.style.cssText='cursor:pointer;background-color:#00FFFF'\" onmouseout=\"this.style.cssText='cursor:pointer'\" onmousedown=\"this.style.cssText='cursor:pointer;background-color:blue'\" can_see_student='"+head.get(o)+"'>"+o+"</th>";
+			});
+			thHtml += "</tr>";
+			$("#resourceTable").append(thHtml);
+			$.each(trs.keys(),function(i,trName){
+				var trHtml = "<tr class='resourceTr' ><th class='datetime' onclick='clicktr(this)' onmouseup=\"this.style.cssText='cursor:pointer;background-color:#00FFFF'\" onmouseover=\"this.style.cssText='cursor:pointer;background-color:#00FFFF'\" onmouseout=\"this.style.cssText='cursor:pointer'\" onmousedown=\"this.style.cssText='cursor:pointer;background-color:blue'\">"+trName+"</th>";
+				$.each(trs.get(trName),function(i2,resObj){
+					trHtml += "<td class='resourceTd' id='resourceTd_"+resObj.id+"' fieldName=\""+resObj.field_name+"\" time_session=\""+resObj.time_session+"\" overlaySize=\""+resObj.overlaySize+"\"  resource_id = \""+resObj.id+"\" can_see_student='"+resObj.can_see_student+"' can_net_book='"+resObj.can_net_book+"'>&nbsp;<div id='res_div_"+resObj.id+"' class='simpleDiv'></div></td>";
+				});
+				trHtml += "</tr>";
+				$("#resourceTable").append(trHtml);
+			});
+		}
+	}
+	
+	renderTable();
+</script>
+
+<script>
+
+	//add 状态
+	function markResStatus(bookId,resId,status) {
+		$("#resourceTd_"+resId).attr("bookId",bookId);
+		if(status == '1'){
+			$("#resourceTd_"+resId).attr("lock","true");
+			$("#resourceTd_"+resId).css("background","yellow");
+		}
+	}
+	//updateInTime
+	
+		markResStatus('2143559','5871','1');
+	
+		markResStatus('2143543','5873','1');
+	
+		markResStatus('2143523','5875','1');
+	
+		markResStatus('2143511','5877','1');
+	
+		markResStatus('2144669','5879','1');
+	
+		markResStatus('2150766','5881','1');
+	
+		markResStatus('2150741','5883','1');
+	
+		markResStatus('2150836','5885','1');
+	
+		markResStatus('2163031','5887','1');
+	
+		markResStatus('2150823','5893','1');
+	
+		markResStatus('2162878','5895','1');
+	
+		markResStatus('2162880','5897','1');
+	
+		markResStatus('2143561','5921','1');
+	
+		markResStatus('2143545','5923','1');
+	
+		markResStatus('2143525','5925','1');
+	
+		markResStatus('2143513','5927','1');
+	
+		markResStatus('2144689','5929','1');
+	
+		markResStatus('2150657','5931','1');
+	
+		markResStatus('2150655','5933','1');
+	
+		markResStatus('2150850','5935','1');
+	
+		markResStatus('2162869','5941','1');
+	
+		markResStatus('2162871','5943','1');
+	
+		markResStatus('2162864','5945','1');
+	
+		markResStatus('2130797','5971','1');
+	
+		markResStatus('2130793','5973','1');
+	
+		markResStatus('2130789','5975','1');
+	
+		markResStatus('2130785','5977','1');
+	
+		markResStatus('2130781','5979','1');
+	
+		markResStatus('2130777','5981','1');
+	
+		markResStatus('2130774','5983','1');
+	
+		markResStatus('2130770','5985','1');
+	
+		markResStatus('2130765','5987','1');
+	
+		markResStatus('2130761','5989','1');
+	
+		markResStatus('2130757','5991','1');
+	
+		markResStatus('2130753','5993','1');
+	
+		markResStatus('2130749','5995','1');
+	
+		markResStatus('2130744','5997','1');
+	
+		markResStatus('2130798','6021','1');
+	
+		markResStatus('2130794','6023','1');
+	
+		markResStatus('2130790','6025','1');
+	
+		markResStatus('2130786','6027','1');
+	
+		markResStatus('2130782','6029','1');
+	
+		markResStatus('2130778','6031','1');
+	
+		markResStatus('2130772','6033','1');
+	
+		markResStatus('2130771','6035','1');
+	
+		markResStatus('2130766','6037','1');
+	
+		markResStatus('2130762','6039','1');
+	
+		markResStatus('2130758','6041','1');
+	
+		markResStatus('2130754','6043','1');
+	
+		markResStatus('2130750','6045','1');
+	
+		markResStatus('2130746','6047','1');
+	
+		markResStatus('2143563','35400','1');
+	
+		markResStatus('2143547','35402','1');
+	
+		markResStatus('2143527','35404','1');
+	
+		markResStatus('2107408','35406','1');
+	
+		markResStatus('2107400','35408','1');
+	
+		markResStatus('2107392','35410','1');
+	
+		markResStatus('2107384','35412','1');
+	
+		markResStatus('2107376','35414','1');
+	
+		markResStatus('2143565','35450','1');
+	
+		markResStatus('2143549','35452','1');
+	
+		markResStatus('2143529','35454','1');
+	
+		markResStatus('2107409','35456','1');
+	
+		markResStatus('2107401','35458','1');
+	
+		markResStatus('2107393','35460','1');
+	
+		markResStatus('2107385','35462','1');
+	
+		markResStatus('2107377','35464','1');
+	
+		markResStatus('2143567','35500','1');
+	
+		markResStatus('2143551','35502','1');
+	
+		markResStatus('2143531','35504','1');
+	
+		markResStatus('2107410','35506','1');
+	
+		markResStatus('2107402','35508','1');
+	
+		markResStatus('2107394','35510','1');
+	
+		markResStatus('2107386','35512','1');
+	
+		markResStatus('2107378','35514','1');
+	
+		markResStatus('2143569','35550','1');
+	
+		markResStatus('2143553','35552','1');
+	
+		markResStatus('2143533','35554','1');
+	
+		markResStatus('2107411','35556','1');
+	
+		markResStatus('2107403','35558','1');
+	
+		markResStatus('2107395','35560','1');
+	
+		markResStatus('2107387','35562','1');
+	
+		markResStatus('2107379','35564','1');
+	
+		markResStatus('2161073','50393','1');
+	
+		markResStatus('2161071','50395','1');
+	
+		markResStatus('2161069','50397','1');
+	
+		markResStatus('2161067','50399','1');
+	
+		markResStatus('2161065','50401','1');
+	
+		markResStatus('2161063','50403','1');
+	
+		markResStatus('2161061','50405','1');
+	
+		markResStatus('2161059','50407','1');
+	
+		markResStatus('2161057','50409','1');
+	
+		markResStatus('2161055','50411','1');
+	
+		markResStatus('2161053','50413','1');
+	
+		markResStatus('2161051','50415','1');
+	
+		markResStatus('2161049','50417','1');
+	
+		markResStatus('2161047','50419','1');
+	
+		markResStatus('2161101','50443','1');
+	
+		markResStatus('2161099','50445','1');
+	
+		markResStatus('2161097','50447','1');
+	
+		markResStatus('2161095','50449','1');
+	
+		markResStatus('2161093','50451','1');
+	
+		markResStatus('2161091','50453','1');
+	
+		markResStatus('2161089','50455','1');
+	
+		markResStatus('2161087','50457','1');
+	
+		markResStatus('2161085','50459','1');
+	
+		markResStatus('2161083','50461','1');
+	
+		markResStatus('2161081','50463','1');
+	
+		markResStatus('2161079','50465','1');
+	
+		markResStatus('2161077','50467','1');
+	
+		markResStatus('2161075','50469','1');
+	
+		markResStatus('2161129','50493','1');
+	
+		markResStatus('2161127','50495','1');
+	
+		markResStatus('2161125','50497','1');
+	
+		markResStatus('2161123','50499','1');
+	
+		markResStatus('2161121','50501','1');
+	
+		markResStatus('2161119','50503','1');
+	
+		markResStatus('2161117','50505','1');
+	
+		markResStatus('2161115','50507','1');
+	
+		markResStatus('2161113','50509','1');
+	
+		markResStatus('2161111','50511','1');
+	
+		markResStatus('2161109','50513','1');
+	
+		markResStatus('2161107','50515','1');
+	
+		markResStatus('2161105','50517','1');
+	
+		markResStatus('2161103','50519','1');
+	
+		markResStatus('2161157','50543','1');
+	
+		markResStatus('2161155','50545','1');
+	
+		markResStatus('2161153','50547','1');
+	
+		markResStatus('2161151','50549','1');
+	
+		markResStatus('2161149','50551','1');
+	
+		markResStatus('2161147','50553','1');
+	
+		markResStatus('2161145','50555','1');
+	
+		markResStatus('2161143','50557','1');
+	
+		markResStatus('2161141','50559','1');
+	
+		markResStatus('2161139','50561','1');
+	
+		markResStatus('2161137','50563','1');
+	
+		markResStatus('2161135','50565','1');
+	
+		markResStatus('2161133','50567','1');
+	
+		markResStatus('2161131','50569','1');
+	
+		markResStatus('2163061','737970','1');
+	
+	//updateForUnsubscribe
+	  
+	
+	//设置td时间值以及是否过期 (格式 '5:00-6:00') 超过结束时间算过期
+	function isLate(time_date,tSession) {
+		var now = new Date();
+	    var sd=time_date.split("-");
+	    eval("sd[1]=" + sd[1] + "-1");
+	    var dNow = new Date(now.getFullYear(),now.getMonth(),now.getDate()).getTime();
+	    var dTarget = new Date(sd[0],sd[1],sd[2]).getTime();
+		if( dNow > dTarget) {
+			return true;
+		}else{
+			if(dNow == dTarget){
+				var endHour = tSession.substr(tSession.indexOf('-') + 1);
+				endHour = endHour.substring(0,endHour.indexOf(':'));
+				eval("endHour="+endHour+";");
+				
+				if(now.getHours() >= endHour) {
+					return true;
+				}
+			}
+		}
+		
+		return false;
+	}
+	
+	  
+  	var time_date = '2022-08-24';
+	$.each($(".resourceTd"),function(i,o){
+		$(o).attr("time_date",time_date);
+		var tdTime_session = $(o).attr("time_session");
+		if(isLate(time_date,tdTime_session)) {
+			$(o).attr("isLate","true");
+		}
+		var catNet = $(o).attr("can_net_book");
+		if(catNet == '0'){
+			$(o).attr("isCatNet","true");
+		}
+	});
+	
+	
+	//添加价格
+	function addCost(resId,cost) {
+		var resTdId="resourceTd_"+resId;
+		$("#"+resTdId).attr("cost",cost);
+	}
+	
+	
+		addCost('5871','20.0');
+	
+		addCost('5873','20.0');
+	
+		addCost('5875','20.0');
+	
+		addCost('5877','20.0');
+	
+		addCost('5879','20.0');
+	
+		addCost('5881','20.0');
+	
+		addCost('5883','20.0');
+	
+		addCost('5885','20.0');
+	
+		addCost('5887','20.0');
+	
+		addCost('5889','20.0');
+	
+		addCost('5891','20.0');
+	
+		addCost('5893','20.0');
+	
+		addCost('5895','20.0');
+	
+		addCost('5897','20.0');
+	
+		addCost('5921','20.0');
+	
+		addCost('5923','20.0');
+	
+		addCost('5925','20.0');
+	
+		addCost('5927','20.0');
+	
+		addCost('5929','20.0');
+	
+		addCost('5931','20.0');
+	
+		addCost('5933','20.0');
+	
+		addCost('5935','20.0');
+	
+		addCost('5937','20.0');
+	
+		addCost('5939','20.0');
+	
+		addCost('5941','20.0');
+	
+		addCost('5943','20.0');
+	
+		addCost('5945','20.0');
+	
+		addCost('5947','20.0');
+	
+		addCost('5971','20.0');
+	
+		addCost('5973','20.0');
+	
+		addCost('5975','20.0');
+	
+		addCost('5977','20.0');
+	
+		addCost('5979','20.0');
+	
+		addCost('5981','20.0');
+	
+		addCost('5983','20.0');
+	
+		addCost('5985','20.0');
+	
+		addCost('5987','20.0');
+	
+		addCost('5989','20.0');
+	
+		addCost('5991','20.0');
+	
+		addCost('5993','20.0');
+	
+		addCost('5995','20.0');
+	
+		addCost('5997','20.0');
+	
+		addCost('6021','20.0');
+	
+		addCost('6023','20.0');
+	
+		addCost('6025','20.0');
+	
+		addCost('6027','20.0');
+	
+		addCost('6029','20.0');
+	
+		addCost('6031','20.0');
+	
+		addCost('6033','20.0');
+	
+		addCost('6035','20.0');
+	
+		addCost('6037','20.0');
+	
+		addCost('6039','20.0');
+	
+		addCost('6041','20.0');
+	
+		addCost('6043','20.0');
+	
+		addCost('6045','20.0');
+	
+		addCost('6047','20.0');
+	
+		addCost('35400','20.0');
+	
+		addCost('35402','20.0');
+	
+		addCost('35404','20.0');
+	
+		addCost('35406','20.0');
+	
+		addCost('35408','20.0');
+	
+		addCost('35410','20.0');
+	
+		addCost('35412','20.0');
+	
+		addCost('35414','20.0');
+	
+		addCost('35416','20.0');
+	
+		addCost('35418','20.0');
+	
+		addCost('35420','20.0');
+	
+		addCost('35422','20.0');
+	
+		addCost('35424','20.0');
+	
+		addCost('35426','20.0');
+	
+		addCost('35450','20.0');
+	
+		addCost('35452','20.0');
+	
+		addCost('35454','20.0');
+	
+		addCost('35456','20.0');
+	
+		addCost('35458','20.0');
+	
+		addCost('35460','20.0');
+	
+		addCost('35462','20.0');
+	
+		addCost('35464','20.0');
+	
+		addCost('35466','20.0');
+	
+		addCost('35468','20.0');
+	
+		addCost('35470','20.0');
+	
+		addCost('35472','20.0');
+	
+		addCost('35474','20.0');
+	
+		addCost('35476','20.0');
+	
+		addCost('35500','20.0');
+	
+		addCost('35502','20.0');
+	
+		addCost('35504','20.0');
+	
+		addCost('35506','20.0');
+	
+		addCost('35508','20.0');
+	
+		addCost('35510','20.0');
+	
+		addCost('35512','20.0');
+	
+		addCost('35514','20.0');
+	
+		addCost('35516','20.0');
+	
+		addCost('35518','20.0');
+	
+		addCost('35520','20.0');
+	
+		addCost('35522','20.0');
+	
+		addCost('35524','20.0');
+	
+		addCost('35526','20.0');
+	
+		addCost('35550','20.0');
+	
+		addCost('35552','20.0');
+	
+		addCost('35554','20.0');
+	
+		addCost('35556','20.0');
+	
+		addCost('35558','20.0');
+	
+		addCost('35560','20.0');
+	
+		addCost('35562','20.0');
+	
+		addCost('35564','20.0');
+	
+		addCost('35566','20.0');
+	
+		addCost('35568','20.0');
+	
+		addCost('35570','20.0');
+	
+		addCost('35572','20.0');
+	
+		addCost('35574','20.0');
+	
+		addCost('35576','20.0');
+	
+		addCost('50393','20.0');
+	
+		addCost('50395','20.0');
+	
+		addCost('50397','20.0');
+	
+		addCost('50399','20.0');
+	
+		addCost('50401','20.0');
+	
+		addCost('50403','20.0');
+	
+		addCost('50405','20.0');
+	
+		addCost('50407','20.0');
+	
+		addCost('50409','20.0');
+	
+		addCost('50411','20.0');
+	
+		addCost('50413','20.0');
+	
+		addCost('50415','20.0');
+	
+		addCost('50417','20.0');
+	
+		addCost('50419','20.0');
+	
+		addCost('50443','20.0');
+	
+		addCost('50445','20.0');
+	
+		addCost('50447','20.0');
+	
+		addCost('50449','20.0');
+	
+		addCost('50451','20.0');
+	
+		addCost('50453','20.0');
+	
+		addCost('50455','20.0');
+	
+		addCost('50457','20.0');
+	
+		addCost('50459','20.0');
+	
+		addCost('50461','20.0');
+	
+		addCost('50463','20.0');
+	
+		addCost('50465','20.0');
+	
+		addCost('50467','20.0');
+	
+		addCost('50469','20.0');
+	
+		addCost('50493','20.0');
+	
+		addCost('50495','20.0');
+	
+		addCost('50497','20.0');
+	
+		addCost('50499','20.0');
+	
+		addCost('50501','20.0');
+	
+		addCost('50503','20.0');
+	
+		addCost('50505','20.0');
+	
+		addCost('50507','20.0');
+	
+		addCost('50509','20.0');
+	
+		addCost('50511','20.0');
+	
+		addCost('50513','20.0');
+	
+		addCost('50515','20.0');
+	
+		addCost('50517','20.0');
+	
+		addCost('50519','20.0');
+	
+		addCost('50543','20.0');
+	
+		addCost('50545','20.0');
+	
+		addCost('50547','20.0');
+	
+		addCost('50549','20.0');
+	
+		addCost('50551','20.0');
+	
+		addCost('50553','20.0');
+	
+		addCost('50555','20.0');
+	
+		addCost('50557','20.0');
+	
+		addCost('50559','20.0');
+	
+		addCost('50561','20.0');
+	
+		addCost('50563','20.0');
+	
+		addCost('50565','20.0');
+	
+		addCost('50567','20.0');
+	
+		addCost('50569','20.0');
+	
+		addCost('737968','20.0');
+	
+		addCost('737970','20.0');
+	
+		addCost('737972','20.0');
+	
+		addCost('737974','20.0');
+	
+		addCost('737976','20.0');
+	
+		addCost('737978','20.0');
+	
+		addCost('737980','20.0');
+	
+		addCost('737982','20.0');
+	
+		addCost('737984','20.0');
+	
+		addCost('737986','20.0');
+	
+		addCost('737988','20.0');
+	
+		addCost('737990','20.0');
+	
+		addCost('737992','20.0');
+	
+		addCost('737994','20.0');
+	
+		addCost('738019','20.0');
+	
+		addCost('738021','20.0');
+	
+		addCost('738023','20.0');
+	
+		addCost('738025','20.0');
+	
+		addCost('738027','20.0');
+	
+		addCost('738029','20.0');
+	
+		addCost('738031','20.0');
+	
+		addCost('738033','20.0');
+	
+		addCost('738035','20.0');
+	
+		addCost('738037','20.0');
+	
+		addCost('738039','20.0');
+	
+		addCost('738041','20.0');
+	
+		addCost('738043','20.0');
+	
+		addCost('738045','20.0');
+	
+	
+	
+	//管理员临时指定禁止网上预定
+	
+	
+</script>
+	
+
+        

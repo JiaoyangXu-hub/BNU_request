@@ -5,19 +5,21 @@
 # import requests
 # request
 
-import requests,hashlib,js2py
+import re
+import requests
 from urllib.parse import urlencode
 from bs4 import BeautifulSoup
-pubkey,privkey = rsa.newkeys(1024)
-
+# pubkey,privkey = rsa.newkeys(1024)
 # crypto = rsa.encrypt(message, pubkey)
 # message = rsa.decrypt(crypto, privkey)
+
 # param_dict={}
 # param = urlencode(param_dict)
 # url = 'http://cas.bnu.edu.cn/cas/login'
 header = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36'
     }
+
 url = 'http://cas.bnu.edu.cn/cas/login?service=https%3A%2F%2Fcgyd.prsc.bnu.edu.cn%2Flogin.jsp'
 session = requests.session()
 response = session.get(url=url,headers=header)
@@ -52,7 +54,7 @@ res=session.post(
 	data=param,headers=header
 	)
 
-session.post(
+r = session.post(
 	url='https://cgyd.prsc.bnu.edu.cn/gymbook/gymBookAction.do?ms=hadContactOrNot',
 	data={'ms': 'hadContactOrNot'},
 	headers=header
@@ -79,7 +81,36 @@ def cal_val_code(img:str):
     else:
         return float(ocr_res[1])    # 返回匹配识别率
 check_res = cal_val_code('./checkcode.jpg')
-session.post()
+param = {
+	'bookData.totalCost': '',
+	'bookData.book_person_zjh': '',
+	'bookData.book_person_name': '',
+	'bookData.book_person_phone': '16601296123',
+	'gymnasium_idForCache': '2',
+	'item_idForCache': '5462',
+	'time_dateForCache': '2022-08-27',
+	'userTypeNumForCache': '1',
+	'putongRes': 'putongRes',
+	'selectedPayWay': '1',
+	'allFieldTime': '69208#2022-08-27',
+	'companion_1': '',
+	'companion_2': '',
+	'companion_3': '',
+	'companion_4': '',
+	'companion_5': '',
+	'companion_6': '',
+	'companion_7': '',
+	'companion_8': '',
+	'companion_9': '',
+	'checkcodeuser': check_res,
+	'selectPayWay': '1',
+}
+resp = session.post(
+	url='https://cgyd.prsc.bnu.edu.cn/gymbook/gymbook/gymBookAction.do?ms=saveGymBook',
+	data=param,headers=header,
+)
+if re.search('预定成功',resp.text):
+	pass
 
 
 response.text

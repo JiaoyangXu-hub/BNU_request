@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>816</width>
+    <width>814</width>
     <height>642</height>
    </rect>
   </property>
@@ -38,16 +38,6 @@
        <string>网球</string>
       </property>
      </item>
-    </widget>
-   </item>
-   <item row="5" column="4">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
     </widget>
    </item>
    <item row="0" column="5" rowspan="5">
@@ -263,6 +253,20 @@
      </property>
     </widget>
    </item>
+   <item row="5" column="1">
+    <widget class="QPushButton" name="Begin">
+     <property name="text">
+      <string>Begin</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QPushButton" name="Cancel">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <tabstops>
@@ -279,22 +283,6 @@
  </tabstops>
  <resources/>
  <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>textBrowser</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>448</x>
-     <y>552</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>587</x>
-     <y>387</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>From</sender>
    <signal>dateTimeChanged(QDateTime)</signal>
