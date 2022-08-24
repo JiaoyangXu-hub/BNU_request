@@ -105,8 +105,8 @@ if __name__=='__main__':
     wait_element('#pd').clear()
 
     # 登录
-    driver.find_element_by_css_selector('#un').send_keys(id)
-    driver.find_element_by_css_selector('#pd').send_keys(pwd)
+    driver.find_element(by=By.CSS_SELECTOR,value='#un').send_keys(id)
+    driver.find_element(by=By.CSS_SELECTOR,value='#pd').send_keys(pwd)
     wait_element('#index_login_btn').click()
 
     '''
