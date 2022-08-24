@@ -7,8 +7,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.remote.webelement import WebElement
 from paddleocr import PaddleOCR
-import time,datetime,re#,os,requests
-from PIL import Image
+from time import sleep
+from re import findall
+import datetime #,os,requests
+from PIL.Image import Image,open
 
 
 id = '202121250011'
@@ -33,7 +35,7 @@ def cal_val_code(img:str):
     若输入是字符串地址
     '''
     ocr_res = ocr.ocr(img,cls=False)[0][1]
-    expre = re.findall(r'[0-9]{1,2}? *?[+-] *?[0-9]{1,2}',ocr_res[0])
+    expre = findall(r'[0-9]{1,2}? *?[+-] *?[0-9]{1,2}',ocr_res[0])
     # 若识别匹配率到0.8以上且匹配到的pattern只有一个
     if ocr_res[1]>0.8 and len(expre)==1:
         return int(eval(expre[0]))  # 返回结果
@@ -41,7 +43,7 @@ def cal_val_code(img:str):
         return float(ocr_res[1])    # 返回匹配识别率
 
 
-def cal_val_code(img:Image.Image):
+def cal_val_code(img:Image):
     '''
     采用paddleOCR识别和计算验证码的值
     若输入是Image
@@ -49,7 +51,7 @@ def cal_val_code(img:Image.Image):
     img.convert('L')
     ocr = PaddleOCR()
     ocr_res = ocr.ocr(np.asarray(img),cls=False)[0][1]
-    expre = re.findall(r'[0-9]{1,2}? *?[+-] *?[0-9]{1,2}',ocr_res[0])
+    expre = findall(r'[0-9]{1,2}? *?[+-] *?[0-9]{1,2}',ocr_res[0])
     if ocr_res[1]>0.8 and len(expre)==1:
         return int(eval(expre[0]))  # 返回结果
     else:
@@ -66,7 +68,7 @@ def wait_until(hour:int=7,minute:int=29,second:int=0,check_freq=60):
         if now.hour >= hour and now.minute >= minute and now.second >= second:
             break
         else:
-            time.sleep(check_freq)
+            sleep(check_freq)
     return None
 
 
@@ -130,7 +132,7 @@ if __name__=='__main__':
         else:               #否则刷新，等待网页加载，停0.2s
             driver.refresh()
             driver.implicitly_wait(30)
-            time.sleep(0.2)
+            sleep(0.2)
 
     #选择球类后
 
@@ -159,7 +161,7 @@ if __name__=='__main__':
                 break
         # driver.execute_script('document.body.style.zoom=1')#缩放比例
         img_data = driver.get_screenshot_as_png()
-        screenshot = Image.open(BytesIO(img_data))
+        screenshot = open(BytesIO(img_data))
         # screenshot.crop((
         #     loc['x'],loc['y'],
         #     loc['x']+s['width'],loc['y']+s['height']
